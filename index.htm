@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>		
+
+
+<style>
+
+body{
+	background: url(mountain.jpg);
+    background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.weather{
+	position:absolute;
+	left:37%;
+	top: 40%;
+
+	}
+	.bigtext{
+		font-family: 'Roboto', sans-serif;
+    font-size: 54px;
+    text-align: center;
+    color:rgb(160, 200, 73);
+	}
+
+	.breeze{
+		position:absolute;
+	left:35.5%;
+	top: 0%;
+	}
+
+	.weatherdegree{
+	font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color:rgb(4, 18, 49);
+	position:absolute;
+	left:44%;
+	top: 50%;
+	}
+
+	.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+.righty{
+	position:absolute;
+	left:44%;
+	top: 66%;
+    /* position:relative;
+    right:5%;
+	top: 15%; */
+}
+header{
+	overflow:auto;
+}
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 40%;
+  /* background: #555; */
+}
+
+.header h1 {
+	float: left;
+
+  position: relative;
+  top: 32px;
+  /* left: 6px; */
+  position: relative;
+  left: 39%;
+  color: #9dc648;
+}
+
+input[type=text] {
+          margin: auto;
+      border-radius: 4px;
+      padding: 5px 0px 5px 10px;
+    }
+
+</style>
+
+
+<head>
+		<link rel="shortcut icon" href="logo.png" type="image/x-icon">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
+	<title>
+		Breeze
+	</title>
+</head>
+<body onload="first()">
+
+	<div class="header">
+		<img src="logo.png"  width="10%" height="15%" alt="logo" />
+		<h1>reeze</h1>
+	  </div>	
+
+<!-- <div>
+	<img class="breeze" src="logo.png" width="10%" height="15%">  <h1 id="reeze" class="bigtext">reeze</h1>
+</div> -->
+	<form class="weather" action="http://localhost/breeze/index2.php" method="post">
+<input type="text" id="city" name="city" placeholder="Enter city name" >
+<!--<button type="button" id="btn" onclick="getWeather()">Get Weather</button>-->
+ <input type="submit" id="btn" onclick="getWeather()" class="btn btn-success" value="Get Weather">
+ 
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+</form>
+
+<h1 class="weatherdegree" id="weather"></h1>
+
+<form  class="righty" action="http://localhost/breeze/index3.php">
+     <input type="submit" id="history" class="btn btn-secondary"  value="History">
+</form>
+</body>
+
+
+		
+<script>
+		
+	function first(){
+		getWeather2();
+	}
+	
+	function getWeather(){
+		var citytext = document.getElementById("city").value;
+		var APIkey = "c9b40de482a05cf285c63aadfcc30543";
+		var URL = "http://api.openweathermap.org/data/2.5/weather?q=" + citytext + "&appid=" + APIkey;
+		var temp="";
+	
+	if(citytext!=""){
+	
+	// if(citytext=="berlin"){
+	// 		window.location = "http://api.openweathermap.org/data/2.5/weather?q=" + citytext + "&appid=" + APIkey;
+	
+	// 	 }
+	
+			fetch(URL)
+	  .then((resp) => resp.json())
+	  .then(function(data) {
+		let temp = data.main.temp;
+		 document.getElementById("weather").innerHTML = Math.trunc(temp-273) + "°C";
+		})
+	
+	  .catch(function(error) {
+	//console.log(error);
+	  });
+	
+	}
+	else{
+		alert("Please enter the city's name!");
+	}
+	
+		}
+	
+		function getWeather2(){
+		var citytext = document.getElementById("city").value;
+		var APIkey = "c9b40de482a05cf285c63aadfcc30543";
+		var URL = "http://api.openweathermap.org/data/2.5/weather?q=" + citytext + "&appid=" + APIkey;
+		var temp="";
+	
+	if(citytext=="berlin"){
+			window.location = "http://api.openweathermap.org/data/2.5/weather?q=" + citytext + "&appid=" + APIkey;
+	
+		 }
+	
+			fetch(URL)
+	  .then((resp) => resp.json())
+	  .then(function(data) {
+		let temp = data.main.temp;
+		 document.getElementById("weather").innerHTML = Math.trunc(temp-273) + "°C";
+		})
+	
+	  .catch(function(error) {
+	//console.log(error);
+	  });
+	
+	
+	
+		}
+		
+		function getHistory(){
+			window.location = "http://localhost/breeze/index3.php";
+	
+		}
+	
+	
+	</script>
+
+
+</html>
