@@ -4,10 +4,15 @@ $data = file_get_contents($url); // put the contents of the file into a variable
 $characters = json_decode($data); // decode the JSON feed
 
 
+// $servername = "localhost";
+// $username = $characters->username;
+// $password = $characters->password;
+// $dbname = "yussef";
+
 $servername = "localhost";
-$username = $characters->username;
-$password = $characters->password;
-$dbname = "yussef";
+$username = "indocowo_youssef";
+$password = "Youssef@123";
+$dbname = "indocowo_visualprogramming";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
@@ -18,12 +23,7 @@ if (!$conn) {
 
 $sql = "SELECT * FROM cities;";
 
-
 $result = $conn->query($sql);
-
-
-
-
 
 $query = mysqli_query($conn, $sql);
 
@@ -34,17 +34,18 @@ if (!$query) {
 
 
 <html>
+		<link rel="shortcut icon" href="breezelogo.png" type="image/x-icon">
 
 	<style type="text/css">
 		body {
-			font-size: 15px;
-			color: #343d44;
-			font-family: "segoe-ui", "open-sans", tahoma, arial;
-			padding: 0;
-			margin: 0;
-			background: url(mountain.jpg);
-			/* background-repeat: no-repeat; */
-			background-size: 100%;
+            font-size: 15px;
+            color: #343d44;
+            font-family: "segoe-ui", "open-sans", tahoma, arial;
+            padding: 0;
+            margin: 0;
+            background: url(mountain.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
 		}
 
 		table {
@@ -124,47 +125,6 @@ if (!$query) {
             left:40%;
 		}
 
-.dropbtn {
-    margin:10px;
-    background-color: #a7c44c;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #768d2e;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-        margin-left:25px;
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-
 div.ex1 {
     width:100%;
     margin: auto;
@@ -182,6 +142,47 @@ div.ex1 {
     position:absolute;
     right:0.2%;
 }
+
+/*Iphone X screen*/
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) {
+         body{
+        background: url(portraitmountain.jpg);
+        background-size: cover;
+    }
+    		.data-table {
+			font-size: 30px;
+		}
+				.data-table tbody td {
+			color: #ffffff;
+		}
+		.data-table tbody tr:nth-child(odd) td {
+			background-color: #cad1b7;
+		}
+    }
+   
+/*Iphone 8 screen*/
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 667px) 
+    and (-webkit-device-pixel-ratio : 2) { 
+        
+    body{
+    background: url(portraitmountain.jpg);
+    background-size: cover;
+    }
+        .data-table {
+			font-size: 30px;
+		}
+		.data-table tbody td {
+			color: #ffffff;
+		}
+		.data-table tbody tr:nth-child(odd) td {
+			background-color: #cad1b7;
+		}
+    }
 </style>
 <head>	<title>History</title></head>
 <body>
