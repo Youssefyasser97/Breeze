@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<body>
+
+  <audio id="myAudio" controls>
+        <source id="src1" src="https://cdns-preview-0.dzcdn.net//stream//c-013a3f613d47e8b47cdf492a5cade333-1.mp3" controls>
+    </audio>
+<button onclick="change();">Change song</button>
+
+<script>
+function change(){
+    document.getElementById("src1").setAttribute("src", "https://cdns-preview-4.dzcdn.net//stream//c-4c5c040d388d65368954c73cb9a6ee65-2.mp3"); 
+            document.getElementById("myAudio").innerHTML = document.getElementById("myAudio").innerHTML ;
+                document.getElementById("myAudio").innerHTML.reload;
+    document.getElementById("src1").innerHTML.reload;
+
+    console.log("changed");
+}
+
+function reloadDIV () {
+    document.getElementById("here").innerHTML.reload
+}
+
+</script>
+
+</body>
+</html>

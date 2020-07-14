@@ -21,7 +21,7 @@ if (!$conn) {
 }
 
 
-$sql = "SELECT * FROM cities;";
+$sql = "SELECT * FROM cities ORDER BY lastsearch;";
 
 $result = $conn->query($sql);
 
@@ -44,8 +44,8 @@ if (!$query) {
             padding: 0;
             margin: 0;
             background: url(mountain.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
+            /*background-repeat: no-repeat;*/
+            /*background-size: cover;*/
 		}
 
 		table {
@@ -102,6 +102,9 @@ if (!$query) {
 		.data-table tbody tr:nth-child(odd) td {
 			background-color: #ecf2d9;
 		}
+		.data-table tbody tr:nth-child(even) td {
+			background-color: #b9c0b4;
+		}
 		.data-table tbody tr:hover td {
 			background-color: #ffffa2;
 			border-color: #ffff0f;
@@ -150,7 +153,7 @@ div.ex1 {
     and (-webkit-device-pixel-ratio : 3) {
          body{
         background: url(portraitmountain.jpg);
-        background-size: cover;
+        /*background-size: cover;*/
     }
     		.data-table {
 			font-size: 30px;
@@ -171,7 +174,7 @@ div.ex1 {
         
     body{
     background: url(portraitmountain.jpg);
-    background-size: cover;
+    /*background-size: cover;*/
     }
         .data-table {
 			font-size: 30px;

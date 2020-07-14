@@ -1,0 +1,656 @@
+      body{
+      background: url(images/sky3.jpg)  no-repeat center center fixed;
+      -webkit-background-size: cover; /* For WebKit*/
+      -moz-background-size: cover;    /* Mozilla*/
+      -o-background-size: cover;      /* Opera*/
+      background-size: cover;         /* Generic*/
+      }
+      .content{
+      position: absolute;
+      left: 50%;
+      top: 59%;
+      /*top: 70%;*/
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align:center;
+      }
+      header{
+      margin-top: 4px;
+      overflow:auto;
+      }
+      .header img {
+      /*border: 5px solid red;*/
+      width: 295px;
+      height: 111px;
+      position: absolute;
+      left: 50%;
+      top: 2.5%;
+      z-index: 99;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align:center;
+      border-color: inherit;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      }
+      .about{
+      position: absolute;
+      top: 20%;
+      width: 100%;
+      height: 170px;
+      border-style: solid;
+      }
+      input[type=text] {
+      margin: auto;
+      border-radius: 5px;
+      padding: 5px 0px 5px 10px;
+      /*border-color: inherit;*/
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      text-transform: capitalize;
+      opacity: 0.8;
+      z-index: 99;
+      }
+      input[type=button] {
+      margin: auto;
+      border-radius: 12px;
+      padding: 5px 10px 5px 10px;
+      background-color: #153607;
+      /*border-color: inherit;*/
+      -webkit-box-shadow: none;
+      /*box-shadow: none;*/
+      color: #fff;
+      opacity: 0.85;
+      z-index: 99;
+      margin-top: 2px;
+
+      }
+      input[type=submit] {
+      margin: auto;
+      border-radius: 10px;
+      padding: 5px 10px 5px 10px;
+      background-color: #8AC53F;
+      border-color: inherit;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      }
+      .cityname{
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-size: 50px;
+      color: white;
+      /*background-color: rgba(0,0,0,0.35);*/
+      text-transform: capitalize;
+      white-space: nowrap;
+      /*margin-left: -100px;*/
+      /*margin-right: -100px;*/
+      padding-bottom: 5px;
+      }
+      .degree{
+      font-size: 48px;
+      color: white;
+      /*background-color: rgba(0,0,0,0.35);*/
+      text-transform: capitalize;
+      }
+      .descriptiondiv{
+      margin-left: 90px;
+      margin-right: 90px;
+      padding-bottom: 2px;
+      /*background-color: rgba(0,0,0,0.45);*/
+      }
+      .description{
+      margin-top: -5px;
+      font-size: 22px;
+      color: white;
+      /*background-color: rgba(0,0,0,0.35);*/
+      text-transform: capitalize;
+      }
+      .corona{
+      margin-left: 90px;
+      margin-right: 90px;
+      margin-top: -0.25px;
+      font-size: 22px;
+      color: white;
+      background-color: rgba(255,0,0,0.35);
+      text-transform: capitalize;
+      }
+      header {
+      /*background: url('images/pano.jpg');*/
+      text-align: center;
+      width: 100%;
+      height: auto;
+      background-size: cover;
+      background-attachment: fixed;
+      position: relative;
+      /*overflow: hidden;*/
+      border-radius: 0 0 85% 85% / 30%;
+      /*margin-top: -80px;*/
+      }
+      header .overlay{
+      width: 100%;
+      height: 100%;
+      padding: 50px;
+      color: #FFF;
+      }
+      myheader{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      }
+      p {
+      font-size: 30px;
+      margin-bottom: 30px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 100;
+      /*color: #8AC53F;*/
+      }
+      h3 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      margin-bottom: 300px;
+      }
+      .clouds{
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin-top:38px;
+      /*background: #68adf2;*/
+      /*color: #2c3e50;*/
+      }
+      .cloud{
+      width: 22.5em;
+      height: 7.5em;
+      background: #f2f9fe;
+      -moz-border-radius: 6.25em;
+      -webkit-border-radius: 6.25em;
+      border-radius: 6.25em;
+      position: relative;
+      margin: 7.5em auto 1.25em;
+      }
+      .cloud:after, .cloud:before{
+      content: "";
+      position: absolute;
+      background: #f2f9fe;
+      z-index: -1;
+      border-radius: 50%;
+      }
+      .cloud:after{
+      width: 7.5em;
+      height: 7.5em;
+      top: -3.125em;
+      left: 3.125em;
+      }
+      .cloud:before{
+      width: 11.25em;
+      height: 11.25em;
+      top: -5.625em;
+      right: 3.125em;
+      }
+      .cloud.s1{
+      -moz-transform: scale(0.9, 0.9);
+      -ms-transform: scale(0.9, 0.9);
+      -webkit-transform: scale(0.9, 0.9);
+      transform: scale(0.9, 0.9);
+      -webkit-animation: moveclouds 30s linear infinite;
+      -moz-animation: moveclouds 30s linear infinite;
+      -o-animation: moveclouds 30s linear infinite;
+      }
+      .cloud.s2{
+      left: 12.5em;
+      -moz-transform: scale(0.7, 0.7);
+      -ms-transform: scale(0.7, 0.7);
+      -webkit-transform: scale(0.7, 0.7);
+      transform: scale(0.7, 0.7);
+      -webkit-animation: moveclouds 50s linear infinite;
+      -moz-animation: moveclouds 50s linear infinite;
+      -o-animation: moveclouds 50s linear infinte;
+      }
+      .cloud.s3{
+      left: -15.625em;
+      top: -12.5em;
+      -moz-transform: scale(0.4, 0.4);
+      -ms-transform: scale(0.4, 0.4);
+      -webkit-transform: scale(0.4, 0.4);
+      transform: scale(0.4, 0.4);
+      -webkit-animation: moveclouds 40s linear infinite;
+      -moz-animation: moveclouds 40s linear infinite;
+      -o-animation: moveclouds 40s linear infinite;
+      }
+      .cloud.s4{
+      left: 29.375em;
+      top: -35.65em;
+      -moz-transform: scale(0.5, 0.5);
+      -ms-transform: scale(0.5, 0.5);
+      -webkit-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5);
+      -webkit-animation: moveclouds 36s linear infinite;
+      -moz-animation: moveclouds 36s linear infinite;
+      -o-animation: moveclouds 36s linear infinite;
+      }
+      .cloud.s5{
+      left: -38em;
+      top: -38em;
+      -moz-transform: scale(0.3, 0.3);
+      -ms-transform: scale(0.3, 0.3);
+      -webkit-transform: scale(0.3, 0.3);
+      transform: scale(0.3, 0.3);
+      -webkit-animation: moveclouds 44s linear infinite;
+      -moz-animation moveclouds 44s linear infinite;
+      -o-animation: moveclouds 44s linear infinte;
+      }
+      @-webkit-keyframes moveclouds{
+      0%{
+      margin-left: 125em;
+      }
+      100%{
+      margin-left: -125em;
+      }
+      }
+      @-moz-keyframes moveclouds{
+      0%{
+      margin-left: 125em;
+      }
+      100%{
+      margin-left: -125em;
+      }
+      }
+      @-o-keyframes moveclouds{
+      0%{
+      margin-left: 125em;
+      }
+      100%{
+      margin-left: -125em;
+      }
+      }
+      .audioclass{
+      margin-left: 1%;
+      }
+      .autocomplete {
+      position: relative;
+      /*display: inline-block;*/
+      }
+      .autocomplete-items {
+      position: absolute;
+      /*border: 1px solid #d4d4d4;*/
+      border-bottom: none;
+      border-top: none;
+      z-index: 99;
+      /*position the autocomplete items to be the same width as the container:*/
+      /*top: 100%;*/
+      left: 10px;
+      right: 10px;
+      font-size: 16px;
+      }
+      .autocomplete-items div {
+      padding: 6px;
+      cursor: pointer;
+      background-color: #fff; 
+      opacity: 0.8;
+      border-bottom: 1px solid #d4d4d4; 
+      /*width:100px;*/
+      align-items: center;
+      max-width:190px;
+      margin: auto;
+      }
+      /*when hovering an item:*/
+      .autocomplete-items div:hover {
+      background-color: #153607; 
+      color: #fff;
+
+      }
+      /*when navigating through the items using the arrow keys:*/
+      .autocomplete-active {
+      background-color: #153607 !important; 
+      color: #ffffff;
+      }
+      /*----------------------------Screens----------------------------------*/
+      /*Iphone X screen*/
+      @media only screen 
+      and (device-width : 375px) 
+      and (device-height : 812px) 
+      and (-webkit-device-pixel-ratio : 3) {
+      body{
+      background: url(images/skyportrait1comp3.jpg)  no-repeat center center fixed;
+      /*background-repeat: no-repeat;*/
+      /*background-size: cover;*/
+      -webkit-background-size: cover; /* For WebKit*/
+      -moz-background-size: cover;    /* Mozilla*/
+      -o-background-size: cover;      /* Opera*/
+      background-size: cover;         /* Generic*/
+      }
+      .content{
+      top: 50%;
+      }
+      .header img{
+      width: 450px;
+      height: 173px;
+      }
+      input[type=text] {
+      font-size: 30px;
+      border-radius: 14px;
+      padding: 18px 30px 18px 30px;
+      z-index: 99;
+      }
+      input[type=button] {
+      font-size: 28px;
+      border-radius: 14px;
+      padding: 20px 35px 20px 35px;
+      margin-top: 10px;
+      z-index: 99;
+      }
+      input[type=submit] {
+      font-size: 28px;
+      border-radius: 14px;
+      /*background-color: #8AC53F;*/
+      padding: 20px 35px 20px 35px;
+      margin-top: 10px;
+      }
+      .cityname{
+      color: white;
+      font-size: 96px;
+      }
+      .degree{
+      color: white;
+      font-size: 78px;
+      }
+      .descriptiondiv{
+      margin-left: 40px;
+      margin-right: 40px;
+      margin-top:80px;    
+      }
+      .description{
+      font-size: 35px;
+      color: white;
+      }
+      .corona{
+      margin-left: 40px;
+      margin-right: 40px;
+      font-size: 35px;
+      color: white;
+      }
+      .clouds{
+      margin-top: 250px;
+      }
+      .autocomplete-items {
+      font-size: 40px;
+      }
+      .autocomplete-items div {
+      max-width:400px;
+      }
+      }
+      /*Iphone 8 screen*/
+      @media only screen 
+      and (device-width : 375px) 
+      and (device-height : 667px) 
+      and (-webkit-device-pixel-ratio : 2) { 
+      body{
+      background: url(images/skyportrait1comp3.jpg)  no-repeat center center fixed;
+      -webkit-background-size: cover; /* For WebKit*/
+      -moz-background-size: cover;    /* Mozilla*/
+      -o-background-size: cover;      /* Opera*/
+      background-size: cover;         /* Generic*/
+      }
+      .content{
+      top: 55%;
+      }
+      .header img{
+      width: 400px;
+      height: 160px;
+      }
+      input[type=text] {
+      font-size: 30px;
+      border-radius: 14px;
+      padding: 18px 30px 18px 30px;
+      z-index: 99;
+      }
+      input[type=button] {
+      font-size: 28px;
+      border-radius: 14px;
+      padding: 20px 35px 20px 35px;
+      margin-top: 6px;
+      z-index: 99;
+      }
+      input[type=submit] {
+      font-size: 28px;
+      border-radius: 14px;
+      /*background-color: #8AC53F;*/
+      padding: 20px 35px 20px 35px;
+      margin-top: 6px;
+      }
+      .cityname{
+      color: white;
+      font-size: 96px;
+      }
+      .degree{
+      color: white;
+      font-size: 78px;
+      }
+      .descriptiondiv{
+      margin-left: 40px;
+      margin-right: 40px;
+      margin-top:40px;    
+      }
+      .description{
+      font-size: 35px;
+      color: white;
+      }
+      .corona{
+      margin-left: 40px;
+      margin-right: 40px;
+      font-size: 35px;
+      color: white;
+      }
+      .clouds{
+      margin-top: 200px;
+      }
+      .autocomplete-items {
+      font-size: 40px;
+      }
+      .autocomplete-items div {
+      max-width:400px;
+      }
+      }
+      /*Iphone 8 plus*/
+      @media only screen 
+      and (device-width : 414px) 
+      and (device-height : 736px) 
+      and (-webkit-device-pixel-ratio : 3) {
+      body{
+      background: url(images/skyportrait1comp3.jpg)  no-repeat center center fixed;
+      -webkit-background-size: cover; /* For WebKit*/
+      -moz-background-size: cover;    /* Mozilla*/
+      -o-background-size: cover;      /* Opera*/
+      background-size: cover;         /* Generic*/
+      }
+      .content{
+      top: 53%;
+      }
+      .header img{
+      width: 450px;
+      height: 173px;
+      }
+      input[type=text] {
+      font-size: 30px;
+      border-radius: 14px;
+      padding: 18px 30px 18px 30px;
+      z-index: 99;
+      }
+      input[type=button] {
+      font-size: 28px;
+      border-radius: 14px;
+      /*background-color: #8AC53F;*/
+      padding: 20px 35px 20px 35px;
+      z-index: 99;
+      }
+      input[type=submit] {
+      font-size: 28px;
+      border-radius: 14px;
+      /*background-color: #8AC53F;*/
+      padding: 20px 35px 20px 35px;
+      }
+      .cityname{
+      color: white;
+      font-size: 96px;
+      }
+      .degree{
+      color: white;
+      font-size: 78px;
+      }
+      .descriptiondiv{
+      margin-left: 40px;
+      margin-right: 40px;
+      margin-top:80px;    
+      }
+      .description{
+      font-size: 35px;
+      color: white;
+      }
+      .corona{
+      margin-left: 40px;
+      margin-right: 40px;
+      font-size: 35px;
+      color: white;
+      }
+      .clouds{
+      margin-top: 250px;
+      }
+      .autocomplete-items {
+      font-size: 40px;
+      }
+      .autocomplete-items div {
+      max-width:400px;
+      }
+      }
+      /* iphone XR, 11 */
+      @media only screen and (min-device-width : 414px) and (max-device-height : 896px) and (-webkit-device-pixel-ratio : 2) { 
+      body{
+      background: url(images/skyportrait1comp3.jpg)  no-repeat center center fixed;
+      -webkit-background-size: cover; /* For WebKit*/
+      -moz-background-size: cover;    /* Mozilla*/
+      -o-background-size: cover;      /* Opera*/
+      background-size: cover;         /* Generic*/
+      }
+      .content{
+      top: 53%;
+      }
+      .header img{
+      width: 450px;
+      height: 173px;
+      }
+      input[type=text] {
+      font-size: 30px;
+      border-radius: 14px;
+      padding: 18px 30px 18px 30px;
+      z-index: 99;
+      }
+      input[type=button] {
+      font-size: 28px;
+      border-radius: 14px;
+      /*background-color: #8AC53F;*/
+      padding: 20px 35px 20px 35px;
+      z-index: 99;
+      }
+      input[type=submit] {
+      font-size: 28px;
+      border-radius: 14px;
+      /*background-color: #8AC53F;*/
+      padding: 20px 35px 20px 35px;
+      }
+      .cityname{
+      color: white;
+      font-size: 96px;
+      }
+      .degree{
+      color: white;
+      font-size: 78px;
+      }
+      .descriptiondiv{
+      margin-left: 40px;
+      margin-right: 40px;
+      margin-top:80px;    
+      }
+      .description{
+      font-size: 35px;
+      color: white;
+      }
+      .corona{
+      margin-left: 40px;
+      margin-right: 40px;
+      font-size: 35px;
+      color: white;
+      }
+      .clouds{
+      margin-top: 250px;
+      }
+      .autocomplete-items {
+      font-size: 40px;
+      }
+      .autocomplete-items div {
+      max-width:400px;
+      }
+      }
+      /* iphone 5 */
+      @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (-webkit-device-pixel-ratio: 2) { 
+      body{
+      background: url(images/skyportrait1comp3.jpg);
+      background-size: cover;
+      }
+      .content{
+      top: 50%;
+      }
+      .header img{
+      width: 400px;
+      height: 160px;
+      }
+      input[type=text] {
+      font-size: 30px;
+      border-radius: 14px;
+      padding: 18px 30px 18px 30px;
+      z-index: 99;
+      }
+      input[type=button] {
+      font-size: 28px;
+      border-radius: 14px;
+      /*background-color: #8AC53F;*/
+      padding: 20px 35px 20px 35px;
+      z-index: 99;
+      }
+      input[type=submit] {
+      font-size: 28px;
+      border-radius: 14px;
+      /*background-color: #8AC53F;*/
+      padding: 20px 35px 20px 35px;
+      }    
+      .cityname{
+      color: white;
+      font-size: 96px;
+      }
+      .degree{
+      color: white;
+      font-size: 78px;
+      }
+      .descriptiondiv{
+      margin-left: 40px;
+      margin-right: 40px;
+      margin-top:80px;    
+      }
+      .description{
+      font-size: 35px;
+      color: white;
+      }
+      .corona{
+      margin-left: 40px;
+      margin-right: 40px;
+      font-size: 35px;
+      color: white;
+      }
+      .clouds{
+      margin-top: 150px;
+      }       
+      .autocomplete-items {
+      font-size: 40px;
+      }
+      .autocomplete-items div {
+      max-width:400px;
+      }
+      }

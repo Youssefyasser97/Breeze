@@ -1,8 +1,8 @@
-Breeze is a web-based application that provides its users by the current tempreature along with other weather conditions in any city they choose. It also has a search history for the searched cities.
+Breeze is a web-based application that provides its users by the current tempreature in any city they choose. It also has a search history for the searched cities.
 
-The technologies used for this website are: PHP, Javascript, HTML, SQL, and phpmyadmin
+The technologies used for this website are: PHP and phpmyadmin
 
-The website is deployed at url : https://www.ydawood.com/breeze/
+The website is deployed at url : https://www.startapphub.com/breeze/
 
 
 

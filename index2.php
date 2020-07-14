@@ -15,6 +15,8 @@ $temp = $_GET['temp'];
 
 
 $cityname=$_GET['city'];
+// $cityname=$_POST['city'];
+
 $date = date("Y-m-d H:i:s");
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
