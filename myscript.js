@@ -52,7 +52,6 @@
          		alert("Please enter the city or country");
       	}
       	
-      	var APIkey = "c9b40de482a05cf285c63aadfcc30543";
       	var URL = "https://api.openweathermap.org/data/2.5/weather?q=" + citytext + "&appid=" + APIkey;
       	
       	if(citytext == "geneva" || citytext == "Geneva"){
@@ -300,11 +299,7 @@
       
       
       
-      var URLsong = "https://api.napster.com/v2.2/search/verbose?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&query="+citytext+" traditional&type=track";
-      
-      if(citytext=="Sharm El Sheikh" || citytext=="sharm el sheikh" || citytext=="sharm El Sheikh"){
-          URLsong = "https://api.napster.com/v2.2/search/verbose?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&query=sharm+song&type=track";
-      }
+
       
       fetch(URLsong)
          .then(result => result.json())
@@ -471,7 +466,6 @@
       "method": "GET",
       "headers": {
       	"x-rapidapi-host": "restcountries-v1.p.rapidapi.com",
-      	"x-rapidapi-key": "11dc1d221fmsh4ddb54451c9b56fp1f1037jsna2384dc00ed4"
       }
       }).then((resp) => resp.json())
         .then(function(data) {
