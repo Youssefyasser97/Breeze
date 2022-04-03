@@ -253,14 +253,17 @@
                                           capital = data[1].capital;
                                       }
                                       if (screenwidth < 415) {
-                                          document.getElementById("cityname").innerHTML = capital + ",<br> " + citytext;
+                                        console.log("citytext: ", citytext, ", countryname: ", countryname, ", capital: ", capital);
+                                        document.getElementById("cityname").innerHTML = capital + ",<br> " + citytext;
                                       } else {
-                                          document.getElementById("cityname").innerHTML = capital + ", " + citytext;
+                                        console.log("citytext: ", citytext, ", countryname: ", countryname, ", capital: ", capital);
+                                        document.getElementById("cityname").innerHTML = capital + ", " + citytext;
                                       }
 
                                   })
                                   .catch(function (error) {
                                       console.log(error);
+                                      document.getElementById("cityname").innerHTML = citytext;
                                       clearInterval(imagevar);
                                   });
 
