@@ -512,9 +512,10 @@
         .catch(function(error) {
             console.log(error);
  	        clearInterval(imagevar);
-            if(citytext != ""){
-            window.alert("Please enter a valid city or country");
-            }
+            //  commented because populaion api is not working any more
+            // if(citytext != ""){
+            // window.alert("Please enter a valid city or country");
+            // }
         });
 
           }
