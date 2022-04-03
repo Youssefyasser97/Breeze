@@ -51,7 +51,7 @@
       	if(citytext==""){
          		alert("Please enter the city or country");
       	}
-      	var APIkey = "6a391e783cd39d9e7854703125c39da3";
+      	var APIkey = "c9b40de482a05cf285c63aadfcc30543";
           
       	var URL = "https://api.openweathermap.org/data/2.5/weather?q=" + citytext + "&appid=" + APIkey;
       	
