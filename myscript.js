@@ -263,7 +263,6 @@
                                   })
                                   .catch(function (error) {
                                       console.log(error);
-                                      document.getElementById("cityname").innerHTML = citytext;
                                       clearInterval(imagevar);
                                   });
 
