@@ -283,14 +283,11 @@
                       //  window.alert("Please enter a valid city or country");
                   }
 
-
                   // ---------------------------begin for song--------------------------
                   // Napster API:
 
 
-
-                
-                  var URLsong = "https://api.napster.com/v2.2/search/verbose?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&query=" + citytext  + " music" + "&type=track";
+                  var URLsong = "https://api.napster.com/v2.2/search/verbose?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&query=" + citytext + " music" + "&type=track";
                   fetch(URLsong)
                       .then(result => result.json())
                       .then(data => {
@@ -304,58 +301,18 @@
                           if (citytext == "new york" || citytext == "New York" || citytext == "New york" || citytext == "new York") {
                               song = "https://cdns-preview-9.dzcdn.net//stream//c-915cab471c0edf568401fd8b875d2f3a-6.mp3";
                           } else if (citytext == "cairo" || citytext == "Cairo" || citytext == "egypt" || citytext == "Egypt") {
-                              song = "https://listen.hs.llnwd.net/g2/4/0/4/6/6/887066404.mp3";
-                              //  song = "https://cdns-preview-3.dzcdn.net//stream//c-3b3772135b5494cc37d60807f6b4b792-3.mp3";
-                          } else if (citytext == "italy" || citytext == "Italy" || citytext == "rome" || citytext == "Rome") {
-                              song = "https://listen.hs.llnwd.net/g3/1/4/7/3/2/1417123741.mp3";
+                              song = "https://cdns-preview-3.dzcdn.net//stream//c-3b3772135b5494cc37d60807f6b4b792-3.mp3";
                           } else if (citytext == "France" || citytext == "france" || citytext == "Paris" || citytext == "paris") {
-                              song = "https://listen.hs.llnwd.net/g3/0/0/7/8/1/2085318700.mp3";
+                              song = "https://listen.hs.llnwd.net/g3/prvw/0/0/6/6/6/2085366600.mp3";
                           } else if (citytext == "cuba" || citytext == "Cuba" || citytext == "havana" || citytext == "Havana") {
                               song = "https://cdns-preview-7.dzcdn.net//stream//c-7320500dc9a22fb26efd85d1f8433b82-8.mp3";
-                          } else if (citytext == "spain" || citytext == "Spain" || citytext == "madrid" || citytext == "Madrid") {
-                              song = "https://listen.hs.llnwd.net/g3/6/4/9/5/7/1299975946.mp3";
-                          } else if (citytext == "dubai" || citytext == "Dubai" || citytext == "United Arab Emirates" || citytext == "United arab emirates" || citytext == "united arab emirates") {
-                              song = "https://listen.hs.llnwd.net/g3/3/2/8/8/4/1511248823.mp3";
-                          } else if (citytext == "canberra" || citytext == "Canberra" || citytext == "Australia" || citytext == "australia") {
+                          }
+                          else if (citytext == "canberra" || citytext == "Canberra" || citytext == "Australia" || citytext == "australia") {
                               song = "https://cdns-preview-4.dzcdn.net//stream//c-4e5b27070b5ce9fc36e4dc89e1b47bde-2.mp3";
                           } else if (citytext == "barcelona" || citytext == "Barcelona") {
-                              song = "https://listen.hs.llnwd.net/g3/6/8/7/0/1/1142710786.mp3";
-                          } else if (citytext == "ibiza" || citytext == "Ibiza") {
-                              song = "https://listen.hs.llnwd.net/g3/7/5/2/3/9/2105693257.mp3";
-                          } else if (citytext == "brussels" || citytext == "Brussels" || citytext == "Belgium" || citytext == "belgium") {
-                              song = "https://listen.hs.llnwd.net/g3/1/9/4/0/6/1501260491.mp3";
-                          } else if (citytext == "milan" || citytext == "Milan") {
-                              song = "https://listen.hs.llnwd.net/g1/9/4/6/4/5/225454649.mp3";
-                          } else if (citytext == "bali" || citytext == "Bali") {
-                              song = "https://listen.hs.llnwd.net/g1/3/9/7/6/5/255156793.mp3";
-                          } else if (citytext == "russia" || citytext == "Russia" || citytext == "moscow" || citytext == "Moscow") {
-                              song = "https://listen.hs.llnwd.net/g2/1/6/0/2/6/960562061.mp3";
-                          } else if (citytext == "Saudi Arabia" || citytext == "Saudi arabia" || citytext == "saudi arabia" || citytext == "saudi Arabia" || citytext == "riyadh" || citytext == "Riyadh") {
-                              song = "https://listen.hs.llnwd.net/g3/3/9/0/5/7/1383975093.mp3";
-                          } else if (citytext == "Lebanon" || citytext == "lebanon" || citytext == "Beirut" || citytext == "beirut") {
-                              song = "https://listen.hs.llnwd.net/g3/5/2/7/5/3/1718035725.mp3";
-                          } else if (citytext == "delhi" || citytext == "Delhi" || citytext == "New Delhi" || citytext == "new Delhi" || citytext == "new delhi" || citytext == "New delhi" || citytext == "India" || citytext == "india") {
-                              song = "https://listen.hs.llnwd.net/g3/4/6/4/5/5/1159955464.mp3";
-                          } else if (citytext == "islamabad" || citytext == "Islamabad" || citytext == "Pakistan" || citytext == "pakistan") {
-                              song = "https://listen.hs.llnwd.net/g3/0/6/8/3/4/1641643860.mp3";
-                          } else if (citytext == "Casablanca" || citytext == "casablanca") {
-                              song = "https://listen.hs.llnwd.net/g3/1/9/2/7/9/1538097291.mp3";
-                          } else if (citytext == "Morocco" || citytext == "morocco" || citytext == "Rabat" || citytext == "rabat") {
-                              song = "https://listen.hs.llnwd.net/g3/4/7/0/4/2/1182224074.mp3";
-                          } else if (citytext == "Algiers" || citytext == "algiers" || citytext == "Algeria" || citytext == "algeria") {
-                              song = "https://listen.hs.llnwd.net/g3/6/4/4/1/4/1213741446.mp3";
+                              song = "https://listen.hs.llnwd.net/g3/prvw/3/4/0/6/9/2420996043.mp3";
                           } else if (citytext == "Gouna" || citytext == "gouna" || citytext == "Hurghada" || citytext == "hurghada") {
                               song = "https://cdns-preview-f.dzcdn.net//stream//c-f967d16ad9f89e9dade97cdfc9d2d167-6.mp3";
-                          } else if (citytext == "malibu" || citytext == "Malibu") {
-                              song = "https://listen.hs.llnwd.net/g3/9/7/5/8/2/1360828579.mp3";
-                          } else if (citytext == "bahamas" || citytext == "Bahamas") {
-                              song = "https://listen.hs.llnwd.net/g2/2/0/1/5/7/908075102.mp3";
-                          } else if (citytext == "Alexandria" || citytext == "alexandria") {
-                              song = "https://listen.hs.llnwd.net/g1/2/9/3/7/1/108717392.mp3";
-                          } else if (citytext == "Prague" || citytext == "prague") {
-                              song = "https://listen.hs.llnwd.net/g1/0/0/5/8/7/1032478500.mp3";
-                          } else if (citytext == "Denmark" || citytext == "denmark") {
-                              song = "https://listen.hs.llnwd.net/g1/5/2/4/6/3/192836425.mp3";
                           }
                           if (song != null) {
                               document.getElementById("src1").setAttribute("src", song);
