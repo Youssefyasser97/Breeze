@@ -7,4 +7,4 @@ The technologies used for this website are: Javascript, SQL, PHP and phpmyadmin.
 
 Feel the Breeze :)
 
-2023 version
+2023 version. upgraded Heroku stack.
