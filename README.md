@@ -6,3 +6,5 @@ The website depends on APIs that are sent upon request on the go, and then the d
 The technologies used for this website are: Javascript, SQL, PHP and phpmyadmin.
 
 Feel the Breeze :)
+
+2023 version
